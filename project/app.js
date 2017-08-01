@@ -1,5 +1,17 @@
 "use strict";
 
+var questionnaire = function(tNf_qNrs, gen_qNrs) {
+
+    var want = confirm("Feel like trying a get-to-know-the-author quiz?");
+
+    if(want){
+        alert('Alright, we\'ll start with some true or false.');
+        trueFalseQuestions(tNf_qNrs);
+    }
+}
+
+ 
+
 var trueFalseQuestions = function(tNf_qNrs) {       // tNf_qNrs is a 2D array holding arrays of strings with question at 0, true answers at 1, and false answers at 2
     for(var i = 0; i < tNf_qNrs.length; i++) {
 
@@ -24,11 +36,19 @@ var trueFalseQuestions = function(tNf_qNrs) {       // tNf_qNrs is a 2D array ho
 }
 
 
+var gen_qNrs = [ ['', 'if answer', 'if answer response', 'else answer'],
+                 [], ];
+
 // questions [i, 0], true response [i, 1], false response [i, 2]
-var tNf_qNrs = [ [ 'a', 'g', 'b' ],
-             [ 'b', 'good', 'bad' ],
-             [ 'c', '', '' ] ];
+var tNf_qNrs = [ [ 'I grew up in Oregon.', 
+                   'Nope. Hawaii born and raised :D',
+                   'Mahalo!' ],
+                 [ 'I go hiking with my cat.',
+                   'His name is Oreo!',
+                   'You\'re right! I bring my dog too.' ],
+                 [ 'When I was 7 I told my mom I wanted to be an engineer',
+                   'She wishes I did. I told her I\'d become an entomologyst ^^',
+                   'Correct!' ] ];
 
 
-
-trueFalseQuestions(tNf_qNrs);   // first 3 out of 5
+questionnaire(tNf_qNrs, gen_qNrs);
