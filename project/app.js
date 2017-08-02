@@ -26,7 +26,7 @@ var trueFalseQuestions = function(yn_qNrs) {       // yn_qNrs is a 2D array hold
             }
 
             var answer = prompt(yn_qNrs[i][0]);
-            answer.toLowerCase();
+            answer = answer.toLowerCase();
             invalidAnswer = !(answer === 'yes' || answer === 'no' || answer ==='y'|| answer === 'n');  // if the answer is neither yes nor no, it's invalid
 
         } while(invalidAnswer);
