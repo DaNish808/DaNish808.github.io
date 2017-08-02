@@ -73,5 +73,3 @@ var yn_qNrs = [ [ 'I grew up in Oregon.',                  // question 1
                 
 
 questionnaire(yn_qNrs, gen_qNrs);
-
-
