@@ -1,3 +1,55 @@
 * {
-    background: green;
+    background: hsl(160, 30%, 95%);
+    border: 0 0 0 1;
+    box-sizing: border-box;
+}
+
+main {
+    max-width: 1200px;
+    padding: 3% 18% 0 4%;
+}
+
+header {
+    margin-top: 7%;
+    margin-bottom: 8%;
+}
+
+header>h3, header>h1 {
+    margin-bottom: 0;
+    padding-left: 10%;
+} 
+
+h1 {
+    font-family: "Architects+Daughter";
+}
+
+h3 {
+    padding-left: 5%;
+    margin-left: 10%;
+    margin-top: 1%;
+}
+
+#towel {
+    width: 70%;
+    float: right;
+    margin-top: 0%;
+}
+
+blockquote>p::before {
+    content: open-quote;
+}
+
+blockquote>p::after {
+    content: close-quote;
+}
+
+#attribution {
+    text-align: right;
+    margin-top: 0;
+    margin-right: 3%;
+    font-weight: bold;
+}
+
+blockquote, #attribution {
+    margin-bottom: 0;
 }
