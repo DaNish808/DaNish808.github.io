@@ -4,8 +4,8 @@ var want = confirm("Feel like trying a get-to-know-the-author quiz?");
 
 // QUIZ
 if(want){
-    console.log('user is taking the quiz: ');
-    alert('Alright, we\'ll start with some yes or no questions.');
+    // console.log('user is taking the quiz: ');
+    // alert('Alright, we\'ll start with some yes or no questions.');
 
     // // Q's and A's for Y/N quiz
     // // questions [i, 0], true response [i, 1], false response [i, 2]
@@ -53,39 +53,86 @@ if(want){
     //     }
     // }   // Y/N QUIZ END
 
-    // NUMBER GUESSING GAME
-    var datNum = Math.floor((Math.random() * 25) + 1);
-    for(var i = 4; i > 0; i--) {
+    // // NUMBER GUESSING GAME
+    // alert('Welcome to the number guessing game!');
+    // var datNum = Math.floor((Math.random() * 25) + 1);
+    // for(var i = 4; i > 0; i--) {
 
-        var more = " more";
-        if(i === 4) { more = ''; }
-        alert('You have ' + i + more + " guesses.");
+    //     var more = " more";
+    //     if(i === 4) { more = ''; }
+    //     alert('You have ' + i + more + " guesses.");
 
-        var numGuess = parseFloat(prompt('I\'m thinking of a whole number from 1 to my age...'));
-        if((numGuess %1 !== 0) || !(numGuess > 1 && numGuess < 25)) {
-            alert('Not a valid guess.');
-            console.log('in numGuesser: !numGuess.isInteger = ' + (numGuess %1 !== 0));
-            console.log('in numGuesser: (numGuess < 1 && numGuess > 25) = ' + (numGuess <= 1 && numGuess >= 25));
-            i++;
-            continue;
-        } 
-        else if(numGuess === datNum) {
-            alert('You did it! ' + datNum + 'was the correct number.');
+    //     var numGuess = parseFloat(prompt('I\'m thinking of a whole number from 1 to my age...'));
+    //     if((numGuess %1 !== 0) || !(numGuess >= 1 && numGuess <= 25)) {
+    //         alert('Not a valid guess.');
+    //         console.log('in numGuesser: !numGuess.isInteger = ' + (numGuess %1 !== 0));
+    //         console.log('in numGuesser: (numGuess < 1 && numGuess > 25) = ' + (numGuess <= 1 && numGuess >= 25));
+    //         i++;
+    //         continue;
+    //     } 
+    //     else if(numGuess === datNum) {
+    //         alert('You did it! ' + datNum + 'was the correct number.');
+    //         break;
+    //     }
+    //     else if(numGuess > datNum) {
+    //         alert('Too high.');
+    //     }
+    //     else if(numGuess < datNum) {
+    //         alert('Too low.');
+    //     }
+    //     if(i === 1) {
+    //     alert("The number was " + datNum + ".");
+    //     }
+    // } // END OF NUM GUESSING GAME
+
+    // MULTIPLE ANSWER QUESTION
+    var trueAnswers = [ [ 'entomologyst', 'park ranger', 'soldier',
+                        'engineer','scientist', 'physical therapist',
+                        'data scientist', 'web designer' ],
+                        [ 'seven.', 'in middle school.', 'in high school.',
+                        'in college.', 'in college.', 'in college.'] ];
+                        
+    var answerListString = '';
+    for(var i = 0; i < trueAnswers[0].length; i++) {
+        if(i === trueAnswers[0].length - 1) {
+            answerListString = answerListString + 'and ' + trueAnswers[0][i] + '.';
+        }
+        else {
+            answerListString = answerListString + trueAnswers[0][i] + ', ';
+        }
+    }
+
+    for(var i = 6; i > 0; i--) {
+
+        if(i === 6) {
+            alert('You have reached the Final Question');
+            console.log('Final Question:  Can you name one job I\'ve wanted to be? (eg. musician, architect, lawyer, etc.)')
+        }
+        var guess = prompt('Can you name one job I\'ve wanted to be? (eg. musician, architect, lawyer, etc.)').toLowerCase();
+        console.log('user guess (' + i + '): ' + guess);
+
+        if(trueAnswers[0].indexOf(guess) === -1 && i !== 1) {
+            alert('Good guess, but try again. You have ' + (i - 1) + ' attempts left.');
+        }
+        else if (trueAnswers[1].indexOf(guess) < 6){
+            alert("You got it! I wanted to be a " + guess + " when i was " + trueAnswers[1][trueAnswers[0].indexOf(guess)]);
+            console.log('User guessed correctly!');
             break;
         }
-        else if(numGuess > datNum) {
-            alert('Too high.');
-        }
-        else if(numGuess < datNum) {
-            alert('Too low.');
+        else {
+            alert("You got it! I want to be a " + guess);
+            console.log('User guessed correctly!');
+            break;
         }
         if(i === 1) {
-        alert("The number was " + datNum + ".");
+            alert('Good try but time\'s up! I\'ve wanted to be an ' + answerListString );
+            console.log('Answers: ' + answerListString);
+            break;
         }
-    } // END OF NUM GUESSING GAME
+    } // END OF MULT ANSWER QUESTION
 }
 
-
+/* FUNCTIONS */
 // var questionnaire = function(yn_qNrs, gen_qNrs) {
 
 //     var want = confirm("Feel like trying a get-to-know-the-author quiz?");
