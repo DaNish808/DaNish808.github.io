@@ -42,6 +42,37 @@ h4 {
     font-family: "Kalam";
 }
 
+
+
+#little_list {
+    float: left;
+    max-width: 17%;
+    margin: 4% 0% 0% 10%;
+}
+
+#little_list>h3 {
+    margin-bottom: 1.5em;
+    padding-bottom: 0.5em;
+    border: rgba(0, 255, 255, .2);
+    border-style: solid;
+    border-width: 0;
+    border-bottom-width: 0.2em;
+}
+
+ul>li {
+    margin-bottom: 1em;
+}
+
+
+
+#quiz_link {
+    float: right;
+    clear: left;
+    text-shadow: none;
+}
+
+
+
 #towel {
     float: right;
     width: 56%;
@@ -85,27 +116,6 @@ blockquote {
 
 blockquote, #attribution {
     margin-bottom: 0;
-}
-
-
-
-#little_list {
-    float: left;
-    max-width: 17%;
-    margin: 4% 0% 0% 10%;
-}
-
-#little_list>h3 {
-    margin-bottom: 1.5em;
-    padding-bottom: 0.5em;
-    border: rgba(0, 255, 255, .2);
-    border-style: solid;
-    border-width: 0;
-    border-bottom-width: 0.2em;
-}
-
-ul>li {
-    margin-bottom: 1em;
 }
 
 
