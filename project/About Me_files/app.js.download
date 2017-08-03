@@ -146,7 +146,7 @@ if(want){
     } // END OF MULT ANSWER QUESTION
 
     alert("You got " + score + " out of 7 questions right. Thanks for playing!");
-    console.log("Final score: " + score + "/7");
+    console.log("Final score: " + score "/7");
 }
 
 /* FUNCTIONS */
