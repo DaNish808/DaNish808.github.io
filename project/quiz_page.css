@@ -1,3 +1,41 @@
 * {
     background: cyan;
+    
+    /* border-style: solid; */
+    border-width: 1px;
+}
+
+#results_table {
+    margin-bottom: 5%;
+}
+
+#results_table>h2 {
+    margin-left: 10%;
+}
+
+#results_table>table {
+    margin-left: 12%;
+    margin-right: 15%;
+}
+
+tr>th, tr>td {
+    border: solid;
+    border-style: thin;
+    border-width: 0 .2em .2em 0;
+    border-top-right-radius: 0.25em;
+    border-bottom-left-radius: 0.25em;
+}
+
+th {
+    margin: 0.7em 0;
+}
+
+td {
+    padding: 0 0.25em;
+}
+
+nav {
+    float: right;
+    margin-right: 5%;
+    margin-bottom: 5%;
 }

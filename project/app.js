@@ -1,5 +1,6 @@
 "use strict";
 
+
 var want = confirm("Feel like trying a get-to-know-the-author quiz?");
 
 // QUIZ
@@ -37,6 +38,7 @@ if(want){
     for(var i = 0; i < yn_qNrs.length; i++) {
 
         console.log(yn_qNrs[i][0]);     // log question
+        document.getElementById('tq' + i).innerHTML = (yn_qNrs[i][0]);
 
         var invalidAnswer = false;
         do {
@@ -50,23 +52,33 @@ if(want){
 
         } while(invalidAnswer);
         console.log('user: ' + answer);
+        document.getElementById('ta' + i).innerHTML = (answer);
 
         if(answer === 'yes' || answer === 'y') {
             console.log(yn_qNrs[i][1]);
+            document.getElementById('tr' + i).innerHTML = (yn_qNrs[i][1]);
             alert(yn_qNrs[i][1]);
+            if(yn_qNrs[i][3] === "true") {
+                score++;
+            }
         }
         else {
             console.log(yn_qNrs[i][2]);
+            document.getElementById('tr' + i).innerHTML = (yn_qNrs[i][2]);
             alert(yn_qNrs[i][2]);
+            if(yn_qNrs[i][3] !== "true") {
+                score++;
+            }
         }
-        if(yn_qNrs[i][3] === "true") {
-            score++;
-        }
+        document.getElementById('ts' + i).innerHTML = score;
+        
     }   // Y/N QUIZ END
 
     // NUMBER GUESSING GAME
     alert('Welcome to the number guessing game!');
     var datNum = Math.floor((Math.random() * 25) + 1);
+    console.log("Number guessing game:")
+    document.getElementById('tq' + 5).innerHTML = "Guess the number [1 - my_age]";
     for(var i = 4; i > 0; i--) {
 
         var more = " more";
@@ -74,6 +86,7 @@ if(want){
         alert('You have ' + i + more + " guesses.");
 
         var numGuess = parseFloat(prompt('I\'m thinking of a whole number from 1 to my age...'));
+        document.getElementById('ta' + 5).innerHTML = (document.getElementById('ta' + 5).innerHTML + numGuess + "  ");
         if((numGuess %1 !== 0) || !(numGuess >= 1 && numGuess <= 25)) {
             alert('Not a valid guess.');
             console.log('in numGuesser: !numGuess.isInteger = ' + (numGuess %1 !== 0));
@@ -82,7 +95,8 @@ if(want){
             continue;
         } 
         else if(numGuess === datNum) {
-            alert('You did it! ' + datNum + 'was the correct number.');
+            alert('You did it!  ' + datNum + ' was the correct number.');
+            document.getElementById('tr' + 5).innerHTML = 'You did it!  ' + datNum +  ' was the correct number.';
             score++;
             break;
         }
@@ -93,8 +107,11 @@ if(want){
             alert('Too low.');
         }
         if(i === 1) {
-        alert("The number was " + datNum + ".");
+        alert("The number was " + datNum + ".");    
+        document.getElementById('tr' + 5).innerHTML = "The number was " + datNum + ".";
         }
+    
+        document.getElementById('ts' + 5).innerHTML = score;
     } // END OF NUM GUESSING GAME
 
     // MULTIPLE ANSWER QUESTION
@@ -118,17 +135,25 @@ if(want){
 
         if(i === 6) {
             alert('You have reached the Final Question');
-            console.log('Final Question:  Can you name one job I\'ve wanted to be? (eg. musician, architect, lawyer, etc.)')
+            console.log('Final Question:  Can you name one job I\'ve wanted to be? (eg. musician, architect, lawyer, etc.)');
+            document.getElementById('tq' + 6).innerHTML = 'Can you name one job I\'ve wanted to be? (eg. musician, architect, lawyer, etc.)';
         }
         var guess = prompt('Can you name one job I\'ve wanted to be? (eg. musician, architect, lawyer, etc.)').toLowerCase();
         console.log('user guess (' + i + '): ' + guess);
+        document.getElementById('ta' + 6).innerHTML = (document.getElementById('ta' + 6).innerHTML + guess + '   ');
 
-        if(trueAnswers[0].indexOf(guess) === -1 && i !== 1) {
+        if(i === 1) {
+            alert('Good try but time\'s up! I\'ve wanted to be an ' + answerListString );
+            console.log('Answers: ' + answerListString);
+            break;
+        }
+        else if(trueAnswers[0].indexOf(guess) === -1 && i !== 1) {
             alert('Good guess, but try again. You have ' + (i - 1) + ' attempts left.');
         }
         else if (trueAnswers[1].indexOf(guess) < 6){
             alert("You got it! I wanted to be a " + guess + " when i was " + trueAnswers[1][trueAnswers[0].indexOf(guess)]);
             console.log('User guessed correctly!');
+            document.getElementById('tr' + 6).innerHTML = 'User guessed correctly!';
             score++;
             break;
         }
@@ -138,15 +163,13 @@ if(want){
             score++;
             break;
         }
-        if(i === 1) {
-            alert('Good try but time\'s up! I\'ve wanted to be an ' + answerListString );
-            console.log('Answers: ' + answerListString);
-            break;
-        }
+        
+        document.getElementById('ts' + 6).innerHTML = score;
     } // END OF MULT ANSWER QUESTION
 
     alert("You got " + score + " out of 7 questions right. Thanks for playing!");
     console.log("Final score: " + score + "/7");
+    document.getElementById('ts').innerHTML = (score);
 }
 
 /* FUNCTIONS */
