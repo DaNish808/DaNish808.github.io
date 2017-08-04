@@ -116,7 +116,8 @@ function numGuess (score){
             alert('You did it!  ' + datNum + ' was the correct number.');
             document.getElementById('tr' + 5).innerHTML = 'You did it!  ' + datNum +  ' was the correct number.';
             score++;
-            break;
+            document.getElementById('ts' + 5).innerHTML = score;
+            return score;
         }
         else if(numGuess > datNum) {
             alert('Too high.');
@@ -177,13 +178,16 @@ function jobs(score){
             console.log('User guessed correctly!');
             document.getElementById('tr' + 6).innerHTML = 'User guessed correctly!';
             score++;
-            break;
+            document.getElementById('ts' + 6).innerHTML = score;
+            return score;
         }
         else {
             alert("You got it! I want to be a " + guess);
             console.log('User guessed correctly!');
+            document.getElementById('tr' + 6).innerHTML = 'User guessed correctly!';
             score++;
-            break;
+            document.getElementById('ts' + 6).innerHTML = score;
+            return score;
         }
         
     } // END OF MULT ANSWER QUESTION

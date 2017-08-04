@@ -11,12 +11,13 @@ html {
 }
 
 body {
-    background-image: ;
+    background-image: url('./Honolulu_skyline.jpg');
     background-size: cover;
     background-repeat: repeat-y;
     min-height: 100%;
     overflow: hidden;
-    text-shadow: black;
+    color: rgb(255, 255, 230);
+    text-shadow: 0.02em 0.02em 0.1em hsl(324, 100%, 50%);
 }
 
 
@@ -26,35 +27,33 @@ body {
 
 header {
     margin-bottom: 4%;
-    color: black;
 }
 
 header>h1 {
-    font-family: ;
+    font-family: "Audiowide";
     padding-bottom: 0.25em;
     margin-left: 4%;
     padding-left: 2%;
-    border:black;
+    border: rgba(255, 200, 0, 0.5);
     border-bottom-left-radius: 1em;
     border-style: double;
     border-width: 0;
     border-bottom-width: 0.2em;
-    color: black;
+    color: rgb(255, 255, 230);
 }
 
 #results_table {
     margin-bottom: 5%;
 }
 
-
 #results_table>h2 {
-    font-family: ;
+    font-family: "Kalam";
     margin: 0.3em 0;
     margin-left: 10%;
     padding-bottom: 0.5em;
     padding-left: 0.5em;
     line-height: 0.5em;
-    border: black;
+    border: rgba(100, 50, 50, 0.5);
     border-bottom-left-radius: 1em;
     border-style: solid;
     border-width: 0;
@@ -65,32 +64,31 @@ header>h1 {
     margin-left: 12%;
     margin-right: 13%;
     padding: 0.7em;
-    border: black;
+    border: rgba(0, 255, 255, .2);
     border-radius: 1em;
     border-style: solid;
     border-width: 0.00em;
-    background: black;
+    background: rgba(0, 25, 25, .1 );
 }
 
 tr>th, tr>td {
-    color: white;
     border: solid;
     border-style: thin;
     border-width: 0 .2em .2em 0;
     border-top-right-radius: 0.25em;
     border-bottom-left-radius: 0.25em;
-    border-color: black;
+    border-color: hsla(-96, 49%, 34%, 0.9);
 }
 
 th {
     margin: 0.7em 0;
-    font-family: ;
+    font-family: "Kalam";
 }
 
 td {
     padding: 0 0.25em;
     text-align: center;
-    font-family: ;
+    font-family: 'Architects Daughter';
 }
 
 #ts {
@@ -101,7 +99,7 @@ nav {
     float: right;
     margin-right: 5%;
     margin-bottom: 5%;
-    font-family: ;
+    font-family: "Kalam";
 }
 
 

@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url(./night_sky.jpg);
+    background-image: url('./night_sky.jpg');
     background-repeat: repeat-y;
     background-size: cover;
     color: white;
