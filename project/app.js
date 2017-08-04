@@ -1,16 +1,29 @@
 "use strict";
 
 
-var want = confirm("Feel like trying a get-to-know-the-author quiz?");
+quiz();
 
-// QUIZ
-if(want){
 
-    var score = 0;
+function quiz(){
+    var want = confirm("Feel like trying a get-to-know-the-author quiz?");
 
-    console.log('user is taking the quiz: ');
-    alert('Alright, we\'ll start with some yes or no questions.');
+    // QUIZ
+    if(want){
+        var score = 0;
+        console.log('user is taking the quiz: ');
+        alert('Alright, we\'ll start with some yes or no questions.');    
+        score = ynQs();
+        score = numGuess(score);
+        score = jobs(score);
 
+        alert("You got " + score + " out of 7 questions right. Thanks for playing!");
+        console.log("Final score: " + score + "/7");
+        document.getElementById('ts').innerHTML = (score);
+    }
+}
+
+function ynQs(){
+    var score =0;
     // Q's and A's for Y/N quiz
     // questions [i, 0], true response [i, 1], false response [i, 2]
     var yn_qNrs = [ [ 'I\'m 25 years old',                   // question 1
@@ -35,13 +48,14 @@ if(want){
                     'true' ] ];    
 
     // Y/N QUIZ
+
     for(var i = 0; i < yn_qNrs.length; i++) {
 
         console.log(yn_qNrs[i][0]);     // log question
         document.getElementById('tq' + i).innerHTML = (yn_qNrs[i][0]);
 
         var invalidAnswer = false;
-        do {
+        do { //finding valid answer
             if(invalidAnswer) {
                 alert('"yes", \'y\', "no", or \'n\' answers only please (case nonsensitive).');
             }
@@ -73,7 +87,11 @@ if(want){
         document.getElementById('ts' + i).innerHTML = score;
         
     }   // Y/N QUIZ END
+    return score;
+}
 
+
+function numGuess (score){
     // NUMBER GUESSING GAME
     alert('Welcome to the number guessing game!');
     var datNum = Math.floor((Math.random() * 25) + 1);
@@ -110,11 +128,15 @@ if(want){
         alert("The number was " + datNum + ".");    
         document.getElementById('tr' + 5).innerHTML = "The number was " + datNum + ".";
         }
-    
+
         document.getElementById('ts' + 5).innerHTML = score;
     } // END OF NUM GUESSING GAME
 
-    // MULTIPLE ANSWER QUESTION
+    return score;
+}
+
+// MULTIPLE ANSWER QUESTION
+function jobs(score){
     var trueAnswers = [ [ 'entomologyst', 'park ranger', 'soldier',
                         'engineer','scientist', 'physical therapist',
                         'data scientist', 'web designer' ],
@@ -147,10 +169,10 @@ if(want){
             console.log('Answers: ' + answerListString);
             break;
         }
-        else if(trueAnswers[0].indexOf(guess) === -1 && i !== 1) {
+        else if(trueAnswers[0].indexOf(guess) === -1) {
             alert('Good guess, but try again. You have ' + (i - 1) + ' attempts left.');
         }
-        else if (trueAnswers[1].indexOf(guess) < 6){
+        else if (trueAnswers[0].indexOf(guess) < 6){
             alert("You got it! I wanted to be a " + guess + " when i was " + trueAnswers[1][trueAnswers[0].indexOf(guess)]);
             console.log('User guessed correctly!');
             document.getElementById('tr' + 6).innerHTML = 'User guessed correctly!';
@@ -164,13 +186,11 @@ if(want){
             break;
         }
         
-        document.getElementById('ts' + 6).innerHTML = score;
     } // END OF MULT ANSWER QUESTION
-
-    alert("You got " + score + " out of 7 questions right. Thanks for playing!");
-    console.log("Final score: " + score + "/7");
-    document.getElementById('ts').innerHTML = (score);
+    return score;
 }
+
+
 
 /* FUNCTIONS */
 // var questionnaire = function(yn_qNrs, gen_qNrs) {
