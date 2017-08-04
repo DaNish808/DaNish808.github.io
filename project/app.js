@@ -199,7 +199,7 @@ function jobs(score){
 
 /* TEST FUNCTIONS */
 
-addPElement();
+//addPElement();
 
 function addPElement() {
     var main = document.getElementsByTagName("main");

@@ -16,7 +16,7 @@ body {
     background-repeat: repeat-y;
     min-height: 100%;
     overflow: hidden;
-    text-shadow: black;
+    text-shadow: 0.025em 0.025em 0.05em hsla(0, 100%, 50%, 1);
 }
 
 
