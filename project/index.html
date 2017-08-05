@@ -1,95 +1,89 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>About Me</title>
+        <title>Quiz Page</title>
         <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet"/>
-        <link href="./style.css" rel="stylesheet" type="text/css" />
-
-        <meta http://www.bbc.com/earth/story/20150801-beauty-of-new-zealands-night-sky>
+        <link href="./quiz_page.css" type="text/css" rel="stylesheet"/>
     </head>
     <body>
-        <header>
-            <h1>Hello Worlds!</h1>
-            <h4>- David Nishikawa</h4>
-        </header>
-        <div id="main">
-            <div id="little_list">
-                <h3>the Little Things</h3>
+        <div id="rightBorder"></div>
+        <main>
+            <header>
+                <h1>Welcome to the Quiz Page!</h1>
+            </header>
+            <div id='results_table'>
+                <h2>Here are your results:</h2>
+                <table id="table">
+                    <tr id = "tr">
+                        <th class='tableBottomBorder'>Question</th>
+                        <th class='tableBottomBorder'>Answer(s)</th>
+                        <th class='tableBottomBorder'>Response</th>
+                        <th class='tableBottomBorder'>Score</th>
+                    </tr>
+                    </tr>
+                        <td id='tq0'></td>
+                        <td id='ta0'></td>
+                        <td id='tr0'></td>
+                        <td id='ts0' class="tableScoreBorder"></td>
+                    </tr>
+                    <tr>
+                        <td id='tq1'></td>
+                        <td id='ta1'></td>
+                        <td id='tr1'>testing</td>
+                        <td id='ts1' class="tableScoreBorder"></td>
+                    </tr>
+                    <tr>
+                        <td id='tq2'></td>
+                        <td id='ta2'></td>
+                        <td id='tr2'></td>
+                        <td id='ts2' class="tableScoreBorder"></td>
+                    </tr>
+                    <tr>
+                        <td id='tq3'></td>
+                        <td id='ta3'></td>
+                        <td id='tr3'></td>
+                        <td id='ts3' class="tableScoreBorder"></td>
+                    </tr>
+                    <tr>
+                        <td id='tq4'></td>
+                        <td id='ta4'></td>
+                        <td id='tr4'></td>
+                        <td id='ts4' class="tableScoreBorder"></td>
+                    </tr>
+                    <tr>
+                        <td id='tq5'></td>
+                        <td id='ta5'></td>
+                        <td id='tr5'></td>
+                        <td id='ts5' class="tableScoreBorder"></td>
+                    </tr>
+                    <tr>
+                        <td id='tq6' class='tableBottomBorder'></td>
+                        <td id='ta6' class='tableBottomBorder'></td>
+                        <td id='tr6' class='tableBottomBorder'></td>
+                        <td id='ts6' class='tableBottomBorder tableScoreBorder'></td>
+                    </tr>
+                    <tfoot>
+                        <td></td>
+                        <td></td>
+                        <th>Final Score: </th>
+                        <td id='ts' class="tableScoreBorder"></td>
+                    </tfoot>
+                </table>
+            </div>
+            <nav>
                 <ul>
                     <li>
-                        I have a dog named Milk and a cat named Oreo. They're black and white 
-                        and they have some identity issues. Milk gets along well with cats but 
-                        is very wary of other dogs. Oreo walks on a leash.
+                        <a href='./quiz_page.html'>Retake Quiz</a>
                     </li>
                     <li>
-                        I like backpacking, mostly because I like campfires and sleeping bags. 
-                        Some people call it masochism, but really it's more of a trade. 
-                        The more arduous the day's trek, the better that night's camp will feel.
-                    </li>
-                    <li>
-                        My family lives on an island far away. Thank god for skype.
-                    </li>
-                    <li>
-                        Sometimes I feel like it's pretty fortunate that it's so hard to make 
-                        money doing art. It keeps it relaxing and enjoyable.
-                    </li>
-                    <li>
-                        My girlfriend's name is Mie. She makes my life amazing :)
+                        <a href='./index.html'>Return to Home</a>
                     </li>
                 </ul>
-            </div>
-            <div id="towel">
-                <img id="open_quote" src="./open_quote.png" alt='"' >
-                <blockquote>
-                    <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;A towel is just about the most massively useful thing any interstellar Hitchhiker can carry. Partly it has great practical value. You can wrap it around you for warmth as you bound across the cold moons of Jaglan Beta; you can lie on it on the brilliant marble-sanded beaches of Santraginus V, inhaling the heady sea vapours; you can sleep under it beneath the stars which shine so redly on the desert world of Kakrafoon; use it to sail a miniraft down the slow heavy River Moth; wet it for use in hand-to-hand combat; wrap it round your head to ward off noxious fumes or avoid the gaze of the Ravenous Bugblatter Beast of Traal (a mind-bogglingly stupid animal, it assumes that if you can't see it, it can't see you — daft as a brush, but very very ravenous); you can wave your towel in emergencies as a distress signal, and of course you can dry yourself off with it if it still seems to be clean enough.
-                    </p>
-                    <p>
-                        More importantly, a towel has immense psychological value. For some reason, if a strag (strag: nonhitchhiker) discovers that a hitchhiker has his towel with him, he will automatically assume that he is also in possession of a toothbrush, washcloth, soap, tin of biscuits, flask, compass, map, ball of string, gnat spray, wet-weather gear, space suit etc., etc. Furthermore, the strag will then happily lend the hitchhiker any of these or a dozen other items that the hitchhiker might accidentally have "lost." What the strag will think is that any man who can hitch the length and breadth of the Galaxy, rough it, slum it, struggle against terrible odds, win through and still knows where his towel is, is clearly a man to be reckoned with.
-                    </p>
-                </blockquote>
-                <p id="attribution">
-                    Douglas Adams, The Hitchhiker's Guide to the Galaxy
-                </p>
-            </div>
-            <div id="top_ten">
-                <h3>Top Ten Favorite Foods</h3>
-                <ol>                               
-                    <!-- I realize the numbering shouldn't be necessary in an
-                         ordered list, but when I made ol>li display: inline
-                         it got rid of all the numbering.-->
-                      <li>1. Sushi</li>  
-                    <li>2. Spaghetti</li>
-                    <li>3. Bun Bo Hue</li>
-                    <li>4. Steamed Salmon</li>
-                    <li>5. Spam Musubi</li>
-                    <li>6. Tossed Noodles</li>
-                    <li>7. Steak (rare)</li>
-                    <li>8. Pho</li>
-                    <li>9. Pizza</li>
-                    <li>10 Chicken Katsu</li> 
-                </ol>
-            </div>
-            <a  href="./quiz_page.html">
-                <div id="quiz_link">
-                    <p>Go to Quiz Page</p>
-                </div>
-            </a>
-            </div>
-        </div>
+            <nav>
+        </main>
+        
+        <script src="./app.js" type="text/javascript"></script>
     </body>
 </html>
-
-
-
-<!-- Needs work section
-
-- text is too small; 
-    layout breaks at larger magnifications
-    interim solution -> set a min page width
-
-- quiz page is bare, need:
-    table with js hookup
-    css styling -->
