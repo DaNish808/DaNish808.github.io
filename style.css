@@ -176,7 +176,7 @@ ol>li {
 }
 
 #quiz_link:hover {
-    box-shadow: 0 0 3em hsla(180, 100%, 50%, 1);
+    box-shadow: 0 0 3em hsl(180, 100%, 50%);
 }
 
 #quiz_link>p {
