@@ -27,7 +27,7 @@ body {
 
 header {
     margin-bottom: 4%;
-    color: black;
+    color: black;
 }
 
 header>h1 {
@@ -135,7 +135,7 @@ a>p {
     border-width: 0.08em;
     border-radius: 0.3em;
     text-align: center;
-    line-height: 1.4em
+    line-height: 1.4em;
 }
 
 a>p:hover {
