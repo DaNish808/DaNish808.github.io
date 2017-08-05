@@ -161,6 +161,7 @@ ol>li {
     font-size: 120%;
     float: left;
     margin-left: 17%;
+    margin-bottom: 100px;
     clear: left;
     text-shadow: none;
     padding: 1em;
@@ -174,6 +175,15 @@ ol>li {
     background: rgba(10, 10, 40, 0.4);
 }
 
+#quiz_link:hover {
+    box-shadow: 0 0 3em hsla(180, 100%, 50%, 1);
+}
+
 #quiz_link>p {
     margin: 0;
+}
+
+a:visited {
+    color: white;
+    text-shadow: .05em .05em 0.1em cyan;
 }
