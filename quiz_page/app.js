@@ -6,10 +6,10 @@ quiz();
 
 function quiz(){
     var want = confirm("Feel like trying a get-to-know-the-author quiz?");
+    var score = 0;
 
     // QUIZ
     if(want){
-        var score = 0;
         console.log('user is taking the quiz: ');
         alert('Alright, we\'ll start with some yes or no questions.');    
         score = ynQs();
@@ -18,8 +18,8 @@ function quiz(){
 
         alert("You got " + score + " out of 7 questions right. Thanks for playing!");
         console.log("Final score: " + score + "/7");
-        document.getElementById('ts').innerHTML = (score);
     }
+    document.getElementById('ts').innerHTML = (score);
 }
 
 function ynQs(){

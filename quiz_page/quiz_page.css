@@ -11,7 +11,8 @@ html {
 }
 
 body {
-    background-image: ;
+    font-family: 'Comfortaa', cursive;
+    font-size: 14px;
     background-size: cover;
     background-repeat: repeat-y;
     min-height: 100%;
@@ -30,7 +31,6 @@ header {
 }
 
 header>h1 {
-    font-family: ;
     padding-bottom: 0.25em;
     margin-left: 4%;
     padding-left: 2%;
@@ -48,7 +48,6 @@ header>h1 {
 
 
 #results_table>h2 {
-    font-family: ;
     margin: 0.3em 0;
     margin-left: 10%;
     padding-bottom: 0.5em;
@@ -79,15 +78,17 @@ tr>th, tr>td {
     line-height: 1.5em;
 }
 
+#tr>th {
+    text-decoration: underline;
+}
+
 th {
     margin: 0.7em 0;
-    font-family: ;
 }
 
 td {
     padding: 0 0.25em;
     text-align: center;
-    font-family: ;
 }
 
 #ts {
@@ -100,13 +101,8 @@ td {
     border-bottom-right-radius: .25em;
 }
 
-nav {
-    position: fixed;
-    bottom: 0;
-    margin-left: 83%;
-    margin-bottom: 3%;
-    width: 12%;
-    font-family: ;
+#final_score {
+    text-align: right;
 }
 
 #rightBorder {
@@ -120,5 +116,28 @@ nav {
     
 }
 
+nav {
+    position: fixed;
+    bottom: 0;
+    margin-left: 83%;
+    margin-bottom: 3%;
+    width: 12%;
+}
 
+nav>a:visited {
+    color:initial;
+    text-decoration: none;
+}
 
+a>p {
+    border: black;
+    border-style: solid;
+    border-width: 0.08em;
+    border-radius: 0.3em;
+    text-align: center;
+    line-height: 1.4em
+}
+
+a>p:hover {
+    box-shadow: 0 0 3em gray;
+}
