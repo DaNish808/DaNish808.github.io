@@ -188,3 +188,14 @@ a:visited {
     color: white;
     text-shadow: .05em .05em 0.1em cyan;
 }
+
+#brick_div {
+    position: fixed;
+    bottom: 0em;
+    right: 2em;
+}
+
+#brick {
+    width: 100px;
+    height: 100px;
+}
